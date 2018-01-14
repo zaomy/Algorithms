@@ -1,0 +1,36 @@
+function [p, idx] = choose_pivot(A, mode)
+
+% choose 1st
+if (mode ==1)
+p = A(1);
+idx =1;
+end
+
+
+% choose last
+if (mode ==2)
+p = A(end);
+idx = length(A);
+end
+
+% choose median of the first, middle, and end
+if(mode ==3)
+n = length(A);
+% 
+% temp = [A(1) A(ceil(n/2)) A(n)];
+% 
+% [~, mm] = sort(temp);
+% 
+% if(mm(1) ==2)
+%     p = A(1); idx = 1;
+% elseif (mm(2) ==2)
+%     p = A(ceil(n/2)); idx = ceil(n/2);
+% else
+%     p = A(n); idx = n;
+% end
+% end
+
+a1=A(1); a2 = A(ceil(n/2)); a3  =A(end);
+if(a1 > a2) && (a2 >a3)
+
+end
